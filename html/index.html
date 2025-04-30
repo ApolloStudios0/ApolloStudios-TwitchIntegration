@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as-TwitchIntegration</title>
+    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="Invisible">
+    <div class="container">
+        <div class="header">
+            <img src="logo.png" alt="Twitch Logo" class="logo">
+            <div class="input-container">
+                <div class="channel-input-row">
+                    <input type="text" id="channelInput" placeholder="Enter Twitch channel name">
+                </div>
+                <div class="controls-row">
+                    <select id="fontSize">
+                        <option value="1">Small Font</option>
+                        <option value="2" selected>Medium Font</option>
+                        <option value="3">Large Font</option>
+                    </select>
+                    <button id="loadChat">Load Chat</button>
+                    <button id="settingsButton" class="settings-button">⚙️</button>
+                </div>
+            </div>
+        </div>
+        <div class="chat-container" id="chatContainer">
+            <iframe id="chatFrame" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="settings-modal" id="settingsModal">
+        <div class="settings-content">
+            <div class="settings-header">
+                <h2>Settings</h2>
+                <button class="close-settings">&times;</button>
+            </div>
+            <div class="settings-options">
+                <div class="settings-option" id="justShowChat">
+                    <span>Just Show Chat</span>
+                    <span class="option-description">Hide all UI elements except chat</span>
+                </div>
+                <div class="settings-option" id="slightBackground">
+                    <span>Slight Black Background</span>
+                    <span class="option-description">Show chat with a subtle background</span>
+                </div>
+                <div class="settings-option" id="customBackground">
+                    <span>Custom Background</span>
+                    <span class="option-description">Choose a custom background color for chat</span>
+                    <div class="color-picker-container" style="display: none;">
+                        <input type="color" id="backgroundColorPicker" value="#000000">
+                        <button id="applyBackgroundColor">Apply</button>
+                    </div>
+                </div>
+                <div class="settings-option" id="closeEntirely">
+                    <span>Close Entirely</span>
+                    <span class="option-description">Hide the entire interface</span>
+                </div>
+            </div>
+            <div class="credits-section">
+                <h3>Credits</h3>
+                <p>Developed, Built & Integrated By ApolloStudios - This Allows You To Stream Chat Directly To Your FiveM Screen. Keeping You In The Moment 24/7 So You Don't Have To Peek To Other Monitors. Stay In The Game, Stay In The Moment With Apollos Twitch Integration.</p>
+                <p>The Menu Is Draggable, Customizable & Re-Sizeable To Fit Your Exact Needs.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
