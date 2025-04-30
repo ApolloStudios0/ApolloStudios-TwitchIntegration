@@ -11,11 +11,11 @@ end)
 
 -- [ Double Check We Capture Source - NUI Can Be Shifty In Returning Source ]
 -- [ Firing through an event to ensure we capture the source correctly ]
-RegisterNetEvent('as-TwitchIntegration:client:Log', function(streamerConnectedTo)
-    TriggerServerEvent("as-TwitchIntegration:server:Log", streamerConnectedTo)
+RegisterNetEvent('ApolloStudios-TwitchIntegration:client:Log', function(streamerConnectedTo)
+    TriggerServerEvent("ApolloStudios-TwitchIntegration:server:Log", streamerConnectedTo)
 end)
 
 RegisterNUICallback('ChatLoaded', function(data, cb)
     local streamerConnectedTo = data.streamerConnectedTo
-    TriggerEvent("as-TwitchIntegration:client:Log", streamerConnectedTo)
+    TriggerEvent("ApolloStudios-TwitchIntegration:client:Log", streamerConnectedTo)
 end)

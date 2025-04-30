@@ -14,7 +14,7 @@
 --     PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode({username = name, embeds = embed}), { ['Content-Type'] = 'application/json' })
 -- end
 
-RegisterNetEvent("as-TwitchIntegration:server:Log", function(streamerConnectedTo)
+RegisterNetEvent("ApolloStudios-TwitchIntegration:server:Log", function(streamerConnectedTo)
 
     local src = source
     local log = ('%s has connected to %s chat [Via In-Game Twitch Integration]'):format(GetPlayerName(src), streamerConnectedTo)

@@ -40,7 +40,7 @@ $(document).ready(function() {
             'width': '100%',
             'height': '100%'
         });
-        $.post(`https://as-TwitchIntegration/stopUIControl`, JSON.stringify({}));
+        $.post(`https://ApolloStudios-TwitchIntegration/stopUIControl`, JSON.stringify({}));
     });
 
     $('#slightBackground').on('click', function() {
@@ -54,13 +54,13 @@ $(document).ready(function() {
             'width': '100%',
             'height': '100%'
         });
-        $.post(`https://as-TwitchIntegration/stopUIControl`, JSON.stringify({}));
+        $.post(`https://ApolloStudios-TwitchIntegration/stopUIControl`, JSON.stringify({}));
     });
 
     $('#closeEntirely').on('click', function() {
         settingsModal.fadeOut(200);
         $('body').addClass('Invisible');
-        $.post(`https://as-TwitchIntegration/stopUIControl`, JSON.stringify({}));
+        $.post(`https://ApolloStudios-TwitchIntegration/stopUIControl`, JSON.stringify({}));
     });
 
     // Custom background color functionality
@@ -93,7 +93,7 @@ $(document).ready(function() {
             'width': '100%',
             'height': '100%'
         });
-        $.post(`https://as-TwitchIntegration/stopUIControl`, JSON.stringify({}));
+        $.post(`https://ApolloStudios-TwitchIntegration/stopUIControl`, JSON.stringify({}));
     });
 
     // Add window event listener for UI visibility control
@@ -197,7 +197,7 @@ $(document).ready(function() {
         if (channelName) {
             const chatUrl = `https://www.giambaj.it/twitch/jchat/v2/?channel=${channelName}&size=${fontSize}&font=1&animate=true&fade=15&hide_commands=true&stroke=0&shadow=2&small_caps=true`;
             $('#chatFrame').attr('src', chatUrl);
-            $.post(`https://as-TwitchIntegration/ChatLoaded`, JSON.stringify({streamerConnectedTo: channelName}));
+            $.post(`https://ApolloStudios-TwitchIntegration/ChatLoaded`, JSON.stringify({streamerConnectedTo: channelName}));
         }
     });
 
